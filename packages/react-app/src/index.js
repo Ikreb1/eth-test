@@ -7,10 +7,10 @@ import ReactDOM from "react-dom";
 
 import App from "./App";
 
-// You should replace this url with your own and put it into a .env file
-// See all subgraphs: https://thegraph.com/explorer/
+require('dotenv').config()
+
 const client = new ApolloClient({
-  uri: "https://api.thegraph.com/subgraphs/name/paulrberg/create-eth-app",
+  uri: process.env.APOLLO_CLIENT_URI,
 });
 
 ReactDOM.render(
